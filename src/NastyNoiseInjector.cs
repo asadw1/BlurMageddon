@@ -1,3 +1,4 @@
+using BlurMageddon;
 using System;
 using System.Collections.Generic;
 using MathNet.Numerics.LinearAlgebra;
@@ -45,7 +46,7 @@ public static class NastyNoiseInjector
         for (int i = 0; i < noiseCount; i++)
         {
             int index = random.Next(data.Count);
-            data[index].Feature1 += random.NextDouble() * 5.0 - 2.5; // Add random noise
+            data[index].Feature1 += (float)(random.NextDouble() * 5.0 - 2.5); // Add random noise
             data[index].Feature2 *= random.Next(1, 4); // Multiply feature randomly
         }
 
